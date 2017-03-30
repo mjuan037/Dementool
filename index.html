@@ -8,6 +8,18 @@
         <meta charset="UTF-8" />
         <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
         <title>DEMENTOOL</title>
+	 <script type="text/javascript">
+//<![CDATA[
+function verificar(v){
+var p1 = document.getElementById('fecha');
+if( p1.value != v){
+document.getElementById('mensaje').innerHTML = "mal";
+}else{
+document.getElementById('mensaje').innerHTML = "bien";
+}
+}
+//]]>
+</script>
        
         <link rel="shortcut icon" href="../favicon.ico"> 
         <link rel="stylesheet" type="text/css" href="css/demo.css" />
@@ -32,7 +44,8 @@
                                 <h1>Preguntas</h1>   
                                 <p> 
                                     <label for="username" class="uname" data-icon="u" >¿Fecha de nacimiento? </label>
-                                    <input id="username" name="username" required="required" type="text" placeholder="validar informacion"/>
+                                    <input id="fecha" name="username" required="required" type="text" placeholder="validar informacion"/>
+				    <input id="fecha2" name="username" required="required" type="text" placeholder="validar informacion"onkeyup="verificar(this.value);"/> <span id="mensaje"><!-- mensaje de verificación --></span><br />
                                 </p>
 								<p> 
                                     <label for="correo" class="corre" data-icon="o" > ¿Permanece quieto en un lugar?</label>
