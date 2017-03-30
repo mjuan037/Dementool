@@ -17,6 +17,12 @@ document.getElementById('mensaje').innerHTML = "mal";
 }else{
 document.getElementById('mensaje').innerHTML = "bien";
 }
+var p2 = document.getElementById('padre');
+if( p1.value != v){
+document.getElementById('mensaje').innerHTML = "mal";
+}else{
+document.getElementById('mensaje').innerHTML = "bien";
+}
 }
 //]]>
 </script>
@@ -53,7 +59,8 @@ document.getElementById('mensaje').innerHTML = "bien";
                                 </p>
 								<p> 
                                     <label for="Asignatura" class="Asig" data-icon="u" > ¿Como se llama su padre? </label>
-                                    <input id="Asignatura" name="Asignatura" required="required" type="text" placeholder="verificar informacion"/>
+                                    <input id="padre" name="Asignatura" required="required" type="text" placeholder="verificar informacion"/>
+				    <input id="Asignatura" name="Asignatura" required="required" type="text" placeholder="verificar informacion"onkeyup="verificar(this.value);"/> <span id="mensaje"><!-- mensaje de verificación --></span><br />
                                 </p> 
 								<p> 
                                     <label for="disponibilidad" class="disp" data-icon="u" > Reaccion a un movimiento brusco </label>
